@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Generator — QR Guard</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="generator">
+<header class="navbar"><a class="brand" href="index.html"><span class="brand-mark">⌁</span> QR Guard</a><nav><a href="index.html">Dashboard</a><a href="scan.html">Scan</a><a class="active" href="generator.html">Generate</a><a href="guide.html">Safety Guide</a><a href="settings.html">Settings</a></nav><a class="nav-cta" href="scan.html">Scan <span>→</span></a></header>
+<main class="container narrow">
+  <div class="page-title"><p class="eyebrow">EXTRA TOOL</p><h1>Generate a QR code</h1><p class="muted">Create a QR for a URL or text. Useful for testing the analyzer during your project demo.</p></div>
+  <section class="generator-layout">
+    <div class="panel">
+      <label class="field-label">Content</label>
+      <textarea id="generateText" rows="5" placeholder="https://example.com"></textarea>
+      <div class="sample-actions"><button class="btn primary" id="generateBtn">Generate QR</button><button class="btn small" id="sampleGenerate">Use sample</button></div>
+      <p class="muted tiny">This page is an additional project feature for demonstration and testing.</p>
+    </div>
+    <div class="panel qr-preview"><div id="qrOutput"><span>QR preview</span><small>Your code will appear here</small></div><button class="btn small" id="downloadQr">Download QR</button></div>
+  </section>
+</main>
+<footer>QR Guard · Generate test QR codes locally.</footer>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

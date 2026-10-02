@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scan QR — QR Guard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="scan">
+  <header class="navbar">
+    <a class="brand" href="index.html"><span class="brand-mark">⌁</span> QR Guard</a>
+    <nav>
+      <a href="index.html">Dashboard</a><a class="active" href="scan.html">Scan</a>
+      <a href="generator.html">Generate</a><a href="guide.html">Safety Guide</a><a href="settings.html">Settings</a>
+    </nav>
+    <a class="nav-cta" href="history.html">History <span>→</span></a>
+  </header>
+
+  <main class="container narrow">
+    <div class="page-title">
+      <p class="eyebrow">QR ANALYZER</p>
+      <h1>Scan safely before opening.</h1>
+      <p class="muted">Upload a QR image, use your camera, or paste its content for an instant risk explanation.</p>
+    </div>
+
+    <section class="scan-layout">
+      <div class="panel upload-panel">
+        <div class="step-title"><span>1</span><div><h3>Add a QR code</h3><p class="muted">PNG, JPG, WEBP · Maximum 10 MB</p></div></div>
+        <label class="dropzone" id="dropzone">
+          <input id="qrFile" type="file" accept="image/png,image/jpeg,image/webp">
+          <div class="upload-icon">↥</div>
+          <strong>Choose a QR code image</strong>
+          <span>Click to browse your files</span>
+          <button type="button" class="btn small">Browse image</button>
+        </label>
+
+        <div class="divider"><span>OR DEMONSTRATION</span></div>
+        <div class="paste-row">
+          <input id="qrText" type="text" placeholder="Example: https://example.com">
+          <button class="btn primary" id="analyzeBtn">Analyze</button>
+        </div>
+        <button class="camera-btn" id="cameraBtn">◉ Use live camera</button>
+        <p id="scanMessage" class="form-message"></p>
+      </div>
+
+      <aside class="panel side-panel">
+        <p class="eyebrow">WHAT WE CHECK</p>
+        <div class="check-item"><span>01</span><div><strong>Destination</strong><p>URL, text, phone, email or payment content.</p></div></div>
+        <div class="check-item"><span>02</span><div><strong>Warning signs</strong><p>Suspicious domains, IP URLs, urgency and risky words.</p></div></div>
+        <div class="check-item"><span>03</span><div><strong>Risk score</strong><p>A simple 0–100 score with reasons you can understand.</p></div></div>
+      </aside>
+    </section>
+
+    <section id="cameraBox" class="panel camera-box hidden">
+      <div class="camera-head"><h3>Live camera scanner</h3><button class="icon-btn" id="closeCamera">×</button></div>
+      <video id="camera" playsinline></video>
+      <div class="camera-overlay"><span></span></div>
+      <p class="muted">Point the camera at a QR code. Your browser must allow camera access.</p>
+    </section>
+
+    <section class="warning-box">
+      <strong>Important limitation</strong>
+      <p>This tool provides an automated risk estimate. It cannot guarantee that a website is safe. Never enter passwords, OTPs, PINs or payment details based only on a QR scan.</p>
+    </section>
+  </main>
+  <footer>QR Guard · Analyze first, open second.</footer>
+  <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Guard — QR Security Analyzer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <header class="navbar">
+    <a class="brand" href="index.html"><span class="brand-mark">⌁</span> QR Guard</a>
+    <nav>
+      <a class="active" href="index.html">Dashboard</a>
+      <a href="scan.html">Scan</a>
+      <a href="generator.html">Generate</a>
+      <a href="guide.html">Safety Guide</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+    <a class="nav-cta" href="scan.html">New scan <span>→</span></a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">QR CODE SECURITY ANALYZER</p>
+        <h1>Check before<br><span>you click.</span></h1>
+        <p class="hero-copy">Decode a QR code, inspect its destination, and understand common warning signs before opening it.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="scan.html">▣ Start a new scan</a>
+          <a class="btn ghost" href="guide.html">Learn QR safety</a>
+        </div>
+      </div>
+      <div class="hero-shield" aria-hidden="true">⬡</div>
+    </section>
+
+    <section class="section-head">
+      <div>
+        <p class="eyebrow">YOUR OVERVIEW</p>
+        <h2>Security activity</h2>
+      </div>
+      <span class="muted">Saved only on this device</span>
+    </section>
+
+    <section class="stats-grid">
+      <div class="stat-card"><div class="stat-icon blue">◷</div><div><strong id="totalScans">0</strong><span>Total scans</span></div></div>
+      <div class="stat-card"><div class="stat-icon green">✓</div><div><strong id="safeScans">0</strong><span>Safe results</span></div></div>
+      <div class="stat-card"><div class="stat-icon red">!</div><div><strong id="dangerScans">0</strong><span>High-risk results</span></div></div>
+      <div class="stat-card"><div class="stat-icon amber">⚑</div><div><strong id="warnScans">0</strong><span>Warnings</span></div></div>
+    </section>
+
+    <section class="two-col">
+      <div class="panel">
+        <p class="eyebrow">QUICK CHECK</p>
+        <h3>Test a sample link</h3>
+        <p class="muted">Use a demonstration URL to see how the analyzer explains a result.</p>
+        <div class="sample-actions">
+          <button class="btn small" onclick="runDemo('safe')">✓ Safe example</button>
+          <button class="btn small danger-outline" onclick="runDemo('risk')">⚠ Risky example</button>
+        </div>
+      </div>
+      <div class="panel tip-panel">
+        <p class="eyebrow">TODAY'S SAFETY TIP</p>
+        <h3>QR codes can hide their destination</h3>
+        <p class="muted">Never trust a QR sticker just because it looks official. Check the real domain before entering sensitive information.</p>
+        <a href="guide.html" class="text-link">Read the safety guide →</a>
+      </div>
+    </section>
+
+    <section class="section-head recent-head">
+      <div>
+        <p class="eyebrow">RECENT ACTIVITY</p>
+        <h2>Latest scans</h2>
+      </div>
+      <a href="history.html" class="text-link">View all →</a>
+    </section>
+    <div id="recentScans" class="recent-list"></div>
+  </main>
+
+  <footer>QR Guard · Student Cybersecurity Prototype · Educational use only</footer>
+  <script src="js/app.js"></script>
+</body>
+</html>

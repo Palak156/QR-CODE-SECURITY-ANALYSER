@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings — QR Guard</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="settings">
+<header class="navbar"><a class="brand" href="index.html"><span class="brand-mark">⌁</span> QR Guard</a><nav><a href="index.html">Dashboard</a><a href="scan.html">Scan</a><a href="generator.html">Generate</a><a href="guide.html">Safety Guide</a><a class="active" href="settings.html">Settings</a></nav><a class="nav-cta" href="scan.html">New scan <span>→</span></a></header>
+<main class="container narrow">
+  <div class="page-title"><p class="eyebrow">PROJECT CONTROLS</p><h1>Settings</h1><p class="muted">Control how QR Guard stores and explains scan results.</p></div>
+  <section class="settings-card">
+    <div class="setting-row"><div><strong>Save scan history</strong><p>Keep results in this browser so you can review them later.</p></div><label class="switch"><input type="checkbox" id="saveHistory" checked><span></span></label></div>
+    <div class="setting-row"><div><strong>Show detailed reasons</strong><p>Explain which warning signs affected the score.</p></div><label class="switch"><input type="checkbox" id="showReasons" checked><span></span></label></div>
+    <div class="setting-row"><div><strong>Maximum risk score</strong><p>Scores use a simple scale from zero to one hundred.</p></div><b class="value-pill">100 points</b></div>
+    <div class="setting-row"><div><strong>High-risk threshold</strong><p>Results at this score or above are shown as high risk.</p></div><b class="value-pill">70 points</b></div>
+  </section>
+  <section class="danger-panel"><div><div class="danger-icon">⌫</div><div><strong>Local data</strong><p>Delete all scan records stored by this browser.</p></div></div><button class="btn small danger-outline" id="clearSettingsHistory">Clear scan history</button></section>
+</main>
+<footer>QR Guard · Settings are saved on this device.</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

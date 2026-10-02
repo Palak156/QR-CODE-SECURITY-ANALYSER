@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analysis Result — QR Guard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="result">
+  <header class="navbar">
+    <a class="brand" href="index.html"><span class="brand-mark">⌁</span> QR Guard</a>
+    <nav><a href="index.html">Dashboard</a><a href="scan.html">Scan</a><a href="generator.html">Generate</a><a href="guide.html">Safety Guide</a><a href="settings.html">Settings</a></nav>
+    <a class="nav-cta" href="scan.html">New scan <span>→</span></a>
+  </header>
+
+  <main class="container narrow">
+    <div class="page-title">
+      <p class="eyebrow">ANALYSIS COMPLETE</p>
+      <h1>QR security report</h1>
+      <p class="muted">Review the destination and the reasons behind the result before you open anything.</p>
+    </div>
+
+    <section id="resultCard" class="result-card">
+      <div class="score-ring"><span id="score">0</span><small>/100</small></div>
+      <div class="result-main">
+        <span id="riskBadge" class="badge">Analyzing</span>
+        <h2 id="resultTitle">Result</h2>
+        <p id="resultUrl" class="result-url"></p>
+        <div class="result-actions">
+          <button class="btn primary" id="copyResult">Copy content</button>
+          <button class="btn ghost" id="openResult">Open destination</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head compact"><div><p class="eyebrow">WHY THIS SCORE?</p><h2>Security checks</h2></div></div>
+      <div id="reasons" class="reason-list"></div>
+    </section>
+
+    <section class="two-col">
+      <div class="panel"><p class="eyebrow">NEXT STEP</p><h3>Want another scan?</h3><p class="muted">Run a new QR through the analyzer without leaving the app.</p><a class="btn small primary" href="scan.html">Scan another</a></div>
+      <div class="panel"><p class="eyebrow">REMEMBER</p><h3>HTTPS is not a guarantee</h3><p class="muted">A scam site can also use HTTPS. Verify the exact domain and sender.</p></div>
+    </section>
+  </main>
+  <footer>QR Guard · Educational risk estimation</footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
